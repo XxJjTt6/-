@@ -162,10 +162,10 @@
 //		*ret++ = *arr2++;
 //	}
 //	*ret = *arr2;
-//	//while (sz--)
-//	//{
-//	//	*ret++ = '\0';
-//	//}
+//	while (sz--)
+//	{
+//		*ret++ = '\0';
+//	}
 //	return arr1;
 //}
 //int main()
@@ -206,51 +206,51 @@
 //}
 
 //strstr  Ñ°ÕÒÒ»¸ö×Ö·û´®ÊÇ·ñº¬ÓĞ×Ó×Ö·û´®
-//char* my_strstr(const char* arr1, const char* arr2)
-//{
-//	char*p1 = (char*)arr1;
-//	char*p0 = p1;
-//	char*p2 = (char*)arr2;
-//	char*ret=(char*) arr2;
-//	while (*p0&&*p2)
-//	{
-//		if (*p2!=*p1)
-//		{
-//			p1++;
-//		}
-//		p0 = p1;
-//		while (*p1 == *p2)
-//		{
-//			p1++;
-//			p2++;
-//		}
-//		if (*p2 == '\0')
-//		{
-//			return p0;
-//		}
-//		p2 = ret;
-//		p1 = p0;
-//		++p1;
-//		/*p1 = p0;
-//		while (*p1 != *p2)
-//		{
-//			p1++;
-//		}
-//		p0 = p1;
-//		while (*p1 = *p2)
-//		{
-//			p1++;
-//			p2++;
-//		}
-//		if (*p2 == '\0')
-//		{
-//			return p0;
-//		}
-//		p2 = arr2;
-//		p0++;*/
-//	}
-//	return NULL;
-//}
+char* my_strstr(const char* arr1, const char* arr2)
+{
+	char*p1 = (char*)arr1;
+	char*p0 = p1;
+	char*p2 = (char*)arr2;
+	char*ret=(char*) arr2;
+	while (*p0&&*p2)
+	{
+		if (*p2!=*p1)
+		{
+			p1++;
+		}
+		p0 = p1;
+		while (*p1 == *p2)
+		{
+			p1++;
+			p2++;
+		}
+		if (*p2 == '\0')
+		{
+			return p0;
+		}
+		p2 = ret;
+		p1 = p0;
+		++p1;
+		/*p1 = p0;
+		while (*p1 != *p2)
+		{
+			p1++;
+		}
+		p0 = p1;
+		while (*p1 = *p2)
+		{
+			p1++;
+			p2++;
+		}
+		if (*p2 == '\0')
+		{
+			return p0;
+		}
+		p2 = arr2;
+		p0++;*/
+	}
+	return NULL;
+}
 ////char* my_strstr(const char*s1, const char*s2)                                         
 ////{
 ////	assert(s1 && s2);

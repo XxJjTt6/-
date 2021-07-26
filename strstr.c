@@ -10,7 +10,7 @@ char* my_strstr(const char *s1, const char *s2)
 	{
 		return s0;
 	}
-	while (*s0)
+	while (*s0)               //注意这儿的解引用不能少，不然判断的就是s0的地址了
 	{
 		while ((*s0 != *p2)&&*s0 !='\0')  //先找到第一个相等的位置，但与后面那句话不能少，因为可能里面一个都没与它相等的
 		{
